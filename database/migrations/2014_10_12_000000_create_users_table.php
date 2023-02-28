@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('firstname');
             $table->string('lastname');
-            /* $table->string('gender')->nullable(); */
-            /* $table->datetime('birthdate')->nullable(); */
+            $table->string('gender')->nullable();
+            $table->datetime('birthdate')->nullable();
             $table->string('voters_type');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();

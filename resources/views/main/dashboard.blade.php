@@ -106,15 +106,28 @@
                                         <option value="building_permit">Building Permit</option>
                                     </select>
                                     <div class="fields">
-                                        <div class="input-wrapper">
-                                            <input type="text" class="inputs-request" id="firstname" placeholder="Firstname">
-                                            <input type="text" class="inputs-request" id="lastname" placeholder="Lastname">
-                                            <input type="text" class="inputs-request" id="age" placeholder="Age">
-                                            <input type="text" class="inputs-request" id="address" placeholder="Address">
-                                            <input type="text" class="inputs-request" id="purpose" placeholder="Purpose">
-                                        </div> 
-                                    </div>  
-                                </div>
+                                        <div class="column">
+                                            <div class="input-group">
+                                                <input type="text" class="inputs-request">
+                                                <span class="pseudo-label">Firstname</span>
+                                              </div>
+                                              <div class="input-group">
+                                                <input type="text" class="inputs-request">
+                                                <span class="pseudo-label">Lastname</span>
+                                              </div>
+                                        </div>
+                                       
+                                        <div class="column">
+                                            <div class="input-group">
+                                                <input type="text" class="inputs-request">
+                                                <span class="pseudo-label">Age</span>
+                                              </div>
+                                              <div class="input-group">
+                                                <input type="text" class="inputs-request">
+                                                <span class="pseudo-label">Address</span>
+                                              </div>
+                                        </div>                                
+                                      </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary requestButton" data-bs-dismiss="modal">Close</button>
                                     <button type="button" class="btn btn-primary requestButton">Submit</button>

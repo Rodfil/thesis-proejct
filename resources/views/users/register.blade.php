@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="wrapper">
+    <div class="register">
         <div class="container main">
             <div class="row">
                 <div class="col-md-6 side-image">
@@ -26,51 +26,33 @@
 
                                 @error('lastname')
                                 <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
-                            @enderror
-                            </div>
-    
-                            <div class="grid">
-                                {{-- <div class="dropdown">
-                                    <button class="btn">Gender</button>
-                                    <button class="dropdown-toggle" type="button" id="dropdownMenuButton"  data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    </button>
-                                    <div class="dropdown-menu" name="gender" aria-labelledby="dropdownMenuButton">
-                                        <a class="dropdown-item" value="male" href="#">Male</a>
-                                        <a class="dropdown-item" value="female" href="#">Female</a>
-                                    </div>
-
-                                    @error('gender')
-                                    <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
-                                    @enderror
-                                </div>   --}}
-                               {{--  <input placeholder="Selected date" type="date" name="birthdate" id="date-picker-example" class="inputs"> --}}                            
-                            </div>
-    
-                            <div class="input-field" name="voters_type">
-                                <div name="voters_type">
-                                    <div class="dropdown" name="voters_type">
-                                        <button class="btn1" name="voters_type">Registered Voter / None Registered</button>
-                                        <button class="dropdown-toggle toggle" name="voters_type" type="button" id="dropdownMenuButton"  data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                        </button>
-                                      
-                                        <div class="dropdown-menu" name="voters_type" aria-labelledby="dropdownMenuButton">
-                                            <span class="dropdown-item" value="registered">Registered</span>
-                                            <span class="dropdown-item" value="not registered">None</span>
-                                        </div>         
-                                    </div>
-                                </div>
-                                
-
-                               {{--  <select name="voters_type" id="" aria-placeholder="Registers / Not Registered">
-                                    <option value="registered">Registered</option>
-                                    <option value="not registered">Not Registered</option>
-                                </select> --}}
-
-                                @error('voters_type')
-                                <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
                                 @enderror
                             </div>
     
+                            <div class="grid">
+                                <select class="gender inputs" name="gender" id="">
+                                    <option disabled selected value="gender">Gender</option>
+                                    <option class="gender-option" value="male">Male</option>
+                                    <option class="gender-option" value="female">Female</option>
+                                    @error('gender')
+                                    <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                                    @enderror
+                                </select>
+
+                                <input placeholder="Selected date" type="date" name="birthdate" id="date-picker-example" class="inputs">
+                                @error('birthdate')
+                                    <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                                @enderror                        
+                            </div>
+                            
+                            <div class="input-field">
+                                <select class="voters-type inputs" name="voters_type" id="">
+                                    <option disabled selected value="voters">Voters Type</option>
+                                    <option class="voters" value="registered">Registered</option>
+                                    <option  class="voters" value="non_registered">Non Registered</option>
+                                </select>
+                            </div>
+
                             <div class="input-field">
                                 <input type="text" class="inputs" id="email" name="email" required autocomplete="off" placeholder="Email Address">
                             

@@ -78,19 +78,23 @@ nav ul li:nth-child(4) {
     margin-top: 2.2rem;
 }
 
-.wrapper{
-    /* background: #ececec;
-    padding: 0 20px 0 20px; */
-}
+
 .main{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
-.row{
+.register .row{
     width: 56rem;
-    height: 34.2rem;
+    height: 44.2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0px 0px 5px 1px rgb(0 0 0 / 20%);
+}
+
+.row {
+    width: 56rem;
+    height: 34.4rem;
     border-radius: 1.5rem;
     box-shadow: 0px 0px 5px 1px rgb(0 0 0 / 20%);
 }
@@ -104,6 +108,16 @@ nav ul li:nth-child(4) {
     width: 30rem;
     margin-left: -2rem;
     
+}
+
+.register .side-image img {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 44.1rem ;
+    width: 30rem;
+    margin-left: -1rem
 }
 .text{
     position: absolute;
@@ -142,9 +156,16 @@ i{
     width: 129px;
     position: absolute;
 }
+
+.register .right .image {
+    top: 1rem;
+    width: 9rem;
+    position: absolute;
+}
 .input-box{
     width: 330px;
     box-sizing: border-box;
+    margin-top: 4rem;
     
 }
 
@@ -159,11 +180,19 @@ i{
 .input-box header{
     font-weight: 700;
     text-align: center;
-    margin-bottom: 45px;
     color: #F48D2D;
-    font-size: 31px;
-    line-height: 35px;
+    font-size: 2rem;
 }
+
+.login-wrapper .input-box header {
+    font-weight: 700;
+    text-align: center;
+    color: #F48D2D;
+    font-size: 2rem;;
+    margin-top: -5rem;
+    margin-bottom: 1rem;
+}
+
 .input-field{
     display: flex;
     flex-direction: column;
@@ -173,33 +202,39 @@ i{
 }
 .input{
     height: 56px;
-    width: 100%;
     background: transparent;
+    width: 100%;
     border: none;
     border-bottom: 1px solid rgba(0,0,0,0.2);
     outline: none;
     margin-bottom: 20px;
-    background-color: #F5F5F54D;
     border-radius: 17px;
     z-index: 100000;
     -webkit-box-shadow: 0 15px 16px rgb(0 0 0 / 17%);
     border: #00000040;
+    padding: 1rem 1rem 1rem 1rem;
   
+}
+
+.gender {
+    border: none;
+    outline: none;
+    background: transparent;
 }
 
 .inputs{
     height: 56px;
-    width: 100%;
     background: transparent;
+    width: 100%;
     border: none;
     border-bottom: 1px solid rgba(0,0,0,0.2);
     outline: none;
-    margin-bottom: -3px;
-    background-color: #F5F5F54D;
+    margin-bottom: 9px;
     border-radius: 17px;
     z-index: 100000;
     -webkit-box-shadow: 0 15px 16px rgb(0 0 0 / 17%);
     border: #00000040;
+    padding: 1rem 1rem 1rem 1rem
 }
 .input-box .input-field label{
     position: absolute;
@@ -629,90 +664,73 @@ select {
 
 }
 
-  #my-dropdown option:focus {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  }
-
-  #my-dropdown option {
-    outline: none;
-  }
-  
-  .fields {
-    display: block;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-
-  .column {
-    flex-basis: 45%;
-  }
-
-  .column input {
-    border: none;
-    outline: none;
-  }
- 
-.fields {
-    margin-top: 2rem;
+#my-dropdown option:focus {
+box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
-  .inputs-request {
-    height: 4rem;
-    width: 100%;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid rgba(0,0,0,0.2);
-    outline: none;
-    background-color: #F5F5F54D;
-    border-radius: 17px;
-    z-index: 100000;
-    -webkit-box-shadow: 0 6px  16px rgb(0 0 0 / 17%);
-    border: #00000040;
-    display: block;
-    width: 48%; /* 48% allows for margins and borders */
-    padding: 10px;
-    box-sizing: border-box;
-    color: #041C74;
-  }
-
-  .inputs-request::placeholder {
-    color: #F48D2D;
-    transition: all 0.2s ease-out;
-
-  }
-
-  #firstname, #age {
-    float: left;
-    clear: left; /* 4% allows for margins and borders */
-    margin-bottom: 3rem;
-  }
+#my-dropdown option {
+outline: none;
+}
   
-  #lastname, #address {
-    float: right;
-    clear: right;
-    margin-left: 4%; /* 4% allows for margins and borders */
-  }
 
-  #purpose {
-    margin-right: 25%;
-    height: 5rem;
-    float: right;
-  }
+.column {
+flex-basis: 45%;
+}
 
-  .modal-footer .requestButton {
-    width: 10rem;
-    border-radius: 5rem !important
-  }
+.column input {
+border: none;
+outline: none;
+}
 
-  .modal-header .btn-close {
-    width: 5rem;
-    height: 2rem;
-  }
+.fields {
+display: flex;
+
+}
+
+.inputs-request {
+height: 4rem;
+background-color: #F5F5F54D;
+border-radius: 50rem;
+z-index: 100000;
+-webkit-box-shadow: 0 6px  16px rgb(0 0 0 / 17%);
+border: #00000040;
+width: 87%; /* 48% allows for margins and borders */
+padding: 10px;
+color: #041C74;
+font-size: 1rem;
+}
+
+
+.modal-footer .requestButton {
+width: 10rem;
+border-radius: 5rem !important
+}
+
+.modal-header .btn-close {
+width: 5rem;
+height: 2rem;
+}
+.pseudo-label {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+left: 10px;
+pointer-events: none;
+color: #f48d2d;
+transition: all 0.2s ease-out;
+}
+
+.inputs-request:focus + .pseudo-label,
+.inputs-request.not-empty + .pseudo-label {
+transform: translateY(-150%);
+font-size: 0.75rem;
+}
+
+
 
   
   
-  
+ 
 
 
 

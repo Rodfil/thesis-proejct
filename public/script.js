@@ -35,20 +35,34 @@ $(function() {
   });
 });
 
-
-$(document).ready(function() {
-  $('.inputs-request').on('input', function() {
-    if ($(this).val().length > 0) {
-      $(this).addClass('filled');
-      $(this).prev('label').addClass('active');
-    } else {
-      $(this).removeClass('filled');
-      $(this).prev('label').removeClass('active');
-    }
+$(function() {
+  $('.gender').on('change', function() {
+    if ($(this).val() != '') {
+      $(this).addClass('my-select-selected');
+      $(this).find('option[value="gender"][disabled]').remove();
+    } 
   });
 });
 
+$(function () {
+  $('.voters-type').on('change', function() {
+    if($(this).val() != '') {
+      $(this).addClass('my-select-selected');
+      $(this).find('option[value="voters"]').remove();
+    }
+  })
+});
 
+
+$(document).ready(function() {
+  $(".inputs-request").on("input", function() {
+    if ($(this).val()) {
+      $(this).addClass("not-empty");
+    } else {
+      $(this).removeClass("not-empty");
+    }
+  });
+});
 
 
 /* 
